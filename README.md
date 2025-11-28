@@ -103,7 +103,7 @@
 
 ## 🎬 Demo Video
 
-[🎥 Watch Demo Video](https://youtube.com/watch?v=your-video-id)
+[🎥 Watch Demo Video](https://youtu.be/49Ic-JVLpTc)
 
 *3-minute demonstration showing live ticket resolution with all 6 agents*
 
@@ -237,13 +237,33 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - ✅ Comprehensive documentation
 - ✅ Live demo capability
 
+---
+
+### Project Links
+
+- **🎬 Demo Video**: [`Hackathon Submission`](https://youtu.be/49Ic-JVLpTc)
+- **🚀 Live Demo**: Run Run `python demo_orchestrator.py` and open Auto resolve Service Desk platform in your browser
+- **📖 Documentation**: See [`docs`](./docs/) for Auto resolve Service Desk Azure Services Implementation Guide
+
+
+### Community & Support
+
+- **🐛 Issues**: [GitHub Issues](https://github.com/abdelrazekrizk/Auto-resolve-Service-Desk/issues)
+- **💬 Discussions**: [GitHub Discussions](https://github.com/abdelrazekrizk/Auto-resolve-Service-Desk/discussions)
+
 ## 📞 Contact
 
 - **Project Lead**: [Abdelrazek Rizk]
 - **Team member**: [Sherine Rizk]
-- **LinkedIn**: [Your LinkedIn]
-- **Demo**: [Live Demo Link]
+- **LinkedIn**: [LinkedIn](https://www.linkedin.com/in/abdelrazek-rizk/)]
 
 ---
+<div align="center">
 
-*Built with ❤️ for the Innovation Challenge Hackathon*
+## *Built with ❤️ for for the Innovation Challenge Hackathon 2025*
+
+**🚀 Ready to experience Auto resolve Service Desk?  Run Live Demo and start solves IT support tickets in under 2 with Azure AI!**
+
+**🎯 Demo Ready** | **🚀 Production Deployed** | **🏆 Hackathon Complete** | **🔮 Future Ready**
+
+</div>
