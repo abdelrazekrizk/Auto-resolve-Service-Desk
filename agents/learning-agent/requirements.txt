@@ -1,0 +1,8 @@
+## Python ML Dependencies (for learning-agent-env)
+azure-identity==1.25.1
+openai==2.8.1
+fastapi[all]==0.122.0
+pandas==2.3.3
+pytest==9.0.1
+scikit-learn==1.7.2
+uvicorn[standard]==0.38.0

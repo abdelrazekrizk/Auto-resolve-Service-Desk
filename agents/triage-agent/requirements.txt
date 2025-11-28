@@ -1,0 +1,11 @@
+## Python ML Dependencies (for Triage Agent)
+azure-ai-ml==1.30.0
+azure-identity==1.25.1
+openai==2.8.1
+azure-search-documents==11.6.0
+fastapi[all]==0.122.0
+pandas==2.3.3
+pytest==9.0.1
+pytest-asyncio==1.3.0
+scikit-learn==1.7.2
+uvicorn[standard]==0.38.0

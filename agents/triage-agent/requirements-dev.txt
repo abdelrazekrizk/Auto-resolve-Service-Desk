@@ -1,0 +1,7 @@
+## Python ML DEV Dependencies (for Triage Agent)
+pytest==9.0.1
+pytest-asyncio==1.3.0
+httpx==0.28.1
+pytest-cov==7.0.0
+black==25.11.0
+isort==7.0.0
