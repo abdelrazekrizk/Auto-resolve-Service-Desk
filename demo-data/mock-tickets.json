@@ -1,0 +1,158 @@
+{
+  "tickets": [
+    {
+      "id": "TKT-001",
+      "title": "Cannot access development environment",
+      "description": "Getting 403 error when trying to deploy to staging environment. Need immediate access to complete release.",
+      "category": "Technical",
+      "priority": "High",
+      "expectedAgent": "Automation",
+      "expectedResolution": "45s",
+      "mockSolution": "Reset deployment credentials and update service principal permissions",
+      "tags": ["deployment", "access", "staging"],
+      "timestamp": "2025-01-15T10:30:00Z"
+    },
+    {
+      "id": "TKT-002", 
+      "title": "How to configure SSL certificates",
+      "description": "Need help setting up HTTPS for new microservice. Looking for step-by-step configuration guide.",
+      "category": "Information",
+      "priority": "Medium",
+      "expectedAgent": "Knowledge",
+      "expectedResolution": "25s",
+      "mockSolution": "SSL configuration guide with Azure Key Vault integration steps",
+      "tags": ["ssl", "https", "configuration"],
+      "timestamp": "2025-01-15T10:35:00Z"
+    },
+    {
+      "id": "TKT-003",
+      "title": "Database connection timeout",
+      "description": "Application experiencing intermittent database timeouts during peak hours. Performance degradation observed.",
+      "category": "Performance",
+      "priority": "High",
+      "expectedAgent": "Analytics",
+      "expectedResolution": "60s",
+      "mockSolution": "Optimize connection pool settings and implement retry logic",
+      "tags": ["database", "timeout", "performance"],
+      "timestamp": "2025-01-15T10:40:00Z"
+    },
+    {
+      "id": "TKT-004",
+      "title": "User account locked out",
+      "description": "Multiple users reporting account lockouts after password reset. Need immediate resolution.",
+      "category": "Account",
+      "priority": "High",
+      "expectedAgent": "Escalation",
+      "expectedResolution": "90s",
+      "mockSolution": "Unlock accounts and review authentication policy settings",
+      "tags": ["account", "lockout", "authentication"],
+      "timestamp": "2025-01-15T10:45:00Z"
+    },
+    {
+      "id": "TKT-005",
+      "title": "API integration failing",
+      "description": "Third-party API integration returning 500 errors. Service disruption affecting customer workflows.",
+      "category": "Integration",
+      "priority": "Critical",
+      "expectedAgent": "Automation",
+      "expectedResolution": "30s",
+      "mockSolution": "Implement circuit breaker pattern and fallback mechanism",
+      "tags": ["api", "integration", "failure"],
+      "timestamp": "2025-01-15T10:50:00Z"
+    },
+    {
+      "id": "TKT-006",
+      "title": "Security vulnerability report",
+      "description": "Potential security vulnerability detected in authentication module. Requires immediate assessment.",
+      "category": "Security",
+      "priority": "Critical",
+      "expectedAgent": "Escalation",
+      "expectedResolution": "120s",
+      "mockSolution": "Security patch deployment and vulnerability assessment",
+      "tags": ["security", "vulnerability", "authentication"],
+      "timestamp": "2025-01-15T10:55:00Z"
+    },
+    {
+      "id": "TKT-007",
+      "title": "How to implement caching",
+      "description": "Looking for best practices on implementing Redis caching for improved performance.",
+      "category": "Information",
+      "priority": "Low",
+      "expectedAgent": "Knowledge",
+      "expectedResolution": "20s",
+      "mockSolution": "Redis caching implementation guide with Azure Cache patterns",
+      "tags": ["caching", "redis", "performance"],
+      "timestamp": "2025-01-15T11:00:00Z"
+    },
+    {
+      "id": "TKT-008",
+      "title": "Model accuracy degradation",
+      "description": "ML model showing decreased accuracy over past week. Need analysis and retraining recommendations.",
+      "category": "Learning",
+      "priority": "Medium",
+      "expectedAgent": "Learning",
+      "expectedResolution": "180s",
+      "mockSolution": "Trigger model retraining pipeline with updated dataset",
+      "tags": ["ml", "model", "accuracy"],
+      "timestamp": "2025-01-15T11:05:00Z"
+    },
+    {
+      "id": "TKT-009",
+      "title": "Generate monthly report",
+      "description": "Need automated monthly performance report for executive review. Include KPIs and trends.",
+      "category": "Analytics",
+      "priority": "Medium",
+      "expectedAgent": "Analytics",
+      "expectedResolution": "45s",
+      "mockSolution": "Generate comprehensive monthly report with visualizations",
+      "tags": ["report", "analytics", "kpi"],
+      "timestamp": "2025-01-15T11:10:00Z"
+    },
+    {
+      "id": "TKT-010",
+      "title": "Workflow automation setup",
+      "description": "Configure automated workflow for code deployment pipeline. Include approval gates and notifications.",
+      "category": "Automation",
+      "priority": "Medium",
+      "expectedAgent": "Automation",
+      "expectedResolution": "90s",
+      "mockSolution": "Setup CI/CD pipeline with Azure DevOps integration",
+      "tags": ["workflow", "automation", "cicd"],
+      "timestamp": "2025-01-15T11:15:00Z"
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "Peak Load Simulation",
+      "description": "Simulate high-volume ticket processing during peak hours",
+      "ticketCount": 25,
+      "duration": "5 minutes",
+      "expectedResolution": "< 2 minutes average",
+      "ticketTypes": ["Technical", "Information", "Performance"]
+    },
+    {
+      "name": "Critical Incident Response",
+      "description": "Test escalation and coordination for critical security incident",
+      "ticketCount": 5,
+      "duration": "2 minutes",
+      "expectedResolution": "< 90 seconds",
+      "ticketTypes": ["Security", "Critical"]
+    },
+    {
+      "name": "Knowledge Base Validation",
+      "description": "Validate knowledge retrieval accuracy and relevance",
+      "ticketCount": 15,
+      "duration": "3 minutes",
+      "expectedResolution": "< 30 seconds",
+      "ticketTypes": ["Information"]
+    },
+    {
+      "name": "End-to-End Workflow",
+      "description": "Complete ticket lifecycle from triage to resolution",
+      "ticketCount": 10,
+      "duration": "4 minutes",
+      "expectedResolution": "< 2 minutes",
+      "ticketTypes": ["Technical", "Automation", "Analytics"]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "azure_services": {
+    "openai": {
+      "endpoint": "https://your-openai-resource.openai.azure.com/",
+      "api_key": "<your-api_key>",
+      "api_version": "2024-02-01",
+      "deployment_name": "gpt-4",
+      "model": "gpt-4",
+      "max_tokens": 1000,
+      "temperature": 0.3
+    },
+    "ai_search": {
+      "endpoint": "https://ai-search-ser.search.windows.net",
+      "index_name": "knowledge-base",
+      "api_version": "2023-11-01",
+      "search_fields": ["title", "content", "tags"],
+      "select_fields": ["id", "title", "content", "category", "relevance_score"]
+    },
+    "service_bus": {
+      "namespace": "sb-auto-resolve-dev",
+      "endpoint": "https://sb-auto-resolve-dev.servicebus.windows.net:443/",
+      "connection_string": "Endpoint=sb://sb-auto-resolve-dev.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=YOUR_ACCESS_KEY_HERE",
+      "queues": {
+        "triage": "triage-queue",
+        "knowledge": "knowledge-queue", 
+        "automation": "automation-queue",
+        "escalation": "escalation-queue",
+        "learning": "learning-queue",
+        "analytics": "analytics-queue"
+      },
+      "topics": {
+        "ticket_events": "ticket-events",
+        "agent_coordination": "agent-coordination",
+        "performance_metrics": "performance-metrics"
+      }
+    },
+    "key_vault": {
+      "vault_url": "https://kv-auto-resolve-dev.vault.azure.net/",
+      "secrets": {
+        "openai_key": "openai-api-key",
+        "search_key": "search-admin-key",
+        "servicebus_connection": "servicebus-connection-string"
+      }
+    }
+  },
+  "demo_settings": {
+    "mock_mode": true,
+    "performance_simulation": true,
+    "real_azure_integration": true,
+    "fallback_enabled": true,
+    "metrics_collection": true
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "name": "knowledge-base",
+  "fields": [
+    {
+      "name": "id",
+      "type": "Edm.String",
+      "key": true,
+      "searchable": false,
+      "filterable": true,
+      "retrievable": true
+    },
+    {
+      "name": "title",
+      "type": "Edm.String",
+      "searchable": true,
+      "filterable": true,
+      "retrievable": true,
+      "sortable": true,
+      "analyzer": "en.microsoft"
+    },
+    {
+      "name": "content",
+      "type": "Edm.String",
+      "searchable": true,
+      "retrievable": true,
+      "analyzer": "en.microsoft"
+    },
+    {
+      "name": "category",
+      "type": "Edm.String",
+      "searchable": true,
+      "filterable": true,
+      "facetable": true,
+      "retrievable": true
+    },
+    {
+      "name": "tags",
+      "type": "Collection(Edm.String)",
+      "searchable": true,
+      "filterable": true,
+      "facetable": true,
+      "retrievable": true
+    },
+    {
+      "name": "priority",
+      "type": "Edm.String",
+      "filterable": true,
+      "facetable": true,
+      "retrievable": true
+    },
+    {
+      "name": "solution_type",
+      "type": "Edm.String",
+      "filterable": true,
+      "facetable": true,
+      "retrievable": true
+    },
+    {
+      "name": "created_date",
+      "type": "Edm.DateTimeOffset",
+      "filterable": true,
+      "sortable": true,
+      "retrievable": true
+    },
+    {
+      "name": "updated_date",
+      "type": "Edm.DateTimeOffset",
+      "filterable": true,
+      "sortable": true,
+      "retrievable": true
+    },
+    {
+      "name": "view_count",
+      "type": "Edm.Int32",
+      "filterable": true,
+      "sortable": true,
+      "retrievable": true
+    },
+    {
+      "name": "relevance_score",
+      "type": "Edm.Double",
+      "filterable": true,
+      "sortable": true,
+      "retrievable": true
+    }
+  ],
+  "suggesters": [
+    {
+      "name": "sg",
+      "searchMode": "analyzingInfixMatching",
+      "sourceFields": ["title", "tags"]
+    }
+  ],
+  "scoringProfiles": [
+    {
+      "name": "priority-boost",
+      "text": {
+        "weights": {
+          "title": 2.0,
+          "content": 1.0,
+          "tags": 1.5
+        }
+      },
+      "functions": [
+        {
+          "type": "freshness",
+          "fieldName": "updated_date",
+          "boost": 1.2,
+          "interpolation": "linear",
+          "freshness": {
+            "boostingDuration": "P30D"
+          }
+        }
+      ]
+    }
+  ],
+  "semantic": {
+    "configurations": [
+      {
+        "name": "default",
+        "prioritizedFields": {
+          "titleField": {
+            "fieldName": "title"
+          },
+          "prioritizedContentFields": [
+            {
+              "fieldName": "content"
+            }
+          ],
+          "prioritizedKeywordsFields": [
+            {
+              "fieldName": "tags"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
